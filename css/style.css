@@ -161,7 +161,66 @@ h4 {
 .navigation__link-btn:active {
   background-color: var(--color-primary-light);
 }
-
+/* .hambuger {
+  padding: 0.5rem;
+  position: relative;
+}
+.hambuger span {
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 2.8rem;
+  border-radius: 4px;
+  background-color: #000;
+}
+.hambuger span:not(:last-child) {
+  margin-bottom: 0.5rem;
+} */
+.mb {
+  position: fixed;
+  height: 100rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: hsla(0, 0%, 7%, 0.584);
+}
+.mobile-nav {
+  padding: 1rem 3rem;
+  position: absolute;
+  height: 100rem;
+  width: 25%;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  background-color: var(--color-primary-light-3);
+}
+.mb-close {
+  align-self: flex-end;
+  font-size: 4rem;
+  color: #000;
+}
+.mobile {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.mobile__link:link,
+.mobile__link:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #000;
+  padding: 0.8rem;
+  border-bottom: 2px solid transparent;
+}
+.mobile__link:active {
+  border-bottom: 2px solid var(--color-text-1);
+}
+.mobile__link:not(:last-child) {
+  margin-bottom: 1rem;
+}
 /*-------------------------------------------------------------*/
 /*-------------THIS IS THE HERO SECTION------------------------*/
 /*-------------------------------------------------------------*/
