@@ -15,6 +15,32 @@ media queries
   .navigation {
     display: none;
   }
+  /*-------------------------------------------------------------*/
+  /*-------------THIS IS STYLING THE SECTION PRICING-------------*/
+  /*-------------------------------------------------------------*/
+
+  .section__pricing {
+    padding: 4rem 0;
+  }
+  .card-price {
+    padding: 1rem 0;
+  }
+  .card__price {
+    padding: 1rem;
+  }
+  .card__price > :not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  .card__checklist {
+    padding: 1rem 4rem;
+    margin-bottom: 3rem;
+  }
+  .card-price__2::after {
+    content: 'Best value';
+    position: absolute;
+    top: 5%;
+    right: -12%;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   html {
@@ -81,6 +107,40 @@ media queries
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 2rem;
   }
+  /*-------------------------------------------------------------*/
+  /*-------------THIS IS STYLING THE SECTION PRICING-------------*/
+  /*-------------------------------------------------------------*/
+
+  .section__pricing {
+    padding: 3rem 0;
+  }
+  .card-price {
+    padding: 1rem 0;
+  }
+  .card__price {
+    padding: 1rem;
+  }
+  .card__price > :not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  .card__checklist {
+    padding: 1rem 4rem;
+    margin-bottom: 3rem;
+  }
+  .card-price__2::after {
+    content: 'Best value';
+    position: absolute;
+    top: 6%;
+    right: -12%;
+
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 5rem;
+    background-color: var(--background-1);
+    transform: rotate(35deg);
+  }
 }
 @media only screen and (max-width: 37.5em) {
   html {
@@ -88,10 +148,6 @@ media queries
   }
   .main-heading {
     font-size: 4.3rem;
-  }
-  h2 {
-  }
-  h3 {
   }
   .container {
     max-width: 120rem;
@@ -116,8 +172,25 @@ media queries
   /*-------------------------------------------------------------*/
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24srem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     grid-gap: 2rem;
+  }
+  /*-------------------------------------------------------------*/
+  /*-------------THIS IS STYLING THE SECTION PRICING-------------*/
+  /*-------------------------------------------------------------*/
+  .card-price__2::after {
+    content: 'Best value';
+    position: absolute;
+    top: 5%;
+    right: -12%;
+
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 5rem;
+    background-color: var(--background-1);
+    transform: rotate(35deg);
   }
 }
 @media only screen and (max-width: 31.25em) {
@@ -159,7 +232,10 @@ media queries
     padding: 3rem 0;
   }
   .cards {
-    grid-gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 4rem;
   }
   .card:hover {
     transform: translateY(1rem);
@@ -189,5 +265,53 @@ media queries
   .recipe-btn:hover {
     border-bottom: none;
     background-color: #000;
+  }
+  /*-------------------------------------------------------------*/
+  /*-------------THIS IS STYLING THE SECTION PRICING-------------*/
+  /*-------------------------------------------------------------*/
+
+  .section__pricing {
+    padding: 3rem 0;
+  }
+  .tab-container {
+    padding: 0 4rem;
+  }
+  .tab-elements {
+    max-width: 45rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
+  .card-price__2::after {
+    content: 'Best value';
+    position: absolute;
+    top: 7%;
+    right: -11%;
+
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 5rem;
+    background-color: var(--background-1);
+    transform: rotate(35deg);
+  }
+  /*--------------------------------------------------------------------*/
+  /*-------------STYLING THE SECTION ORDER WHICH HAS A FORM-------------*/
+  /*--------------------------------------------------------------------*/
+  .form__details {
+    background-color: var(--color-primary);
+    padding: 3.5rem;
+  }
+  .form_heading {
+    font-size: 4rem;
+  }
+  form {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 3rem;
+  }
+  .form__details > *:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }

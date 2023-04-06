@@ -652,7 +652,7 @@ h4 {
   text-align: center;
 }
 .card__price > :not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .card__heading {
   margin-top: 0;
