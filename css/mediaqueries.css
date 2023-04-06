@@ -1,0 +1,193 @@
+/*
+This design will first inco-oporate mobile first design
+1rem ===10px
+default===16px
+media queries
+>1800px which is 112em
+>1200px and <1800px which is 75em
+>900px and <1200px which is 56.25em
+>600px and <900px which is 37.5em
+>500 and <600px which is 31.25em
+*/
+@media only screen and (max-width: 75em) {
+}
+@media only screen and (max-width: 63.75em) {
+  .navigation {
+    display: none;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 55%;
+  }
+  .container {
+    padding: 0 3.5rem;
+  }
+  .header {
+    padding: 0 1.5rem;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4.5rem;
+    padding: 3rem 0;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+  }
+  .grid-item-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    overflow: hidden;
+  }
+  .grid-item-2 {
+    grid-row: 1 /2;
+  }
+  .text-grid {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 1rem;
+  }
+  .form {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+  .form__details {
+    grid-row: 2/3;
+  }
+  .form__img {
+    grid-row: 1/2;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 2fr; */
+    grid-gap: 3rem;
+  }
+  .footer-1 {
+  }
+  .footer-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+  .main-heading {
+    font-size: 4.3rem;
+  }
+  h2 {
+  }
+  h3 {
+  }
+  .container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+  .grid-item-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    overflow: hidden;
+  }
+  .features > * {
+    margin-right: 1rem;
+  }
+  .features--img {
+    display: block;
+    height: 1.5rem;
+  }
+  /*-------------------------------------------------------------*/
+  /*-------------THIS IS THE SECTION MEALS-----------------------*/
+  /*-------------------------------------------------------------*/
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24srem, 1fr));
+    grid-gap: 2rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  html {
+    font-size: 45%;
+  }
+  .btn__hero-1 {
+    display: inline-block;
+    padding: 1rem 2rem;
+  }
+  .btn__hero-2 {
+    padding: 1rem 2rem;
+  }
+  .hero__custom-img {
+    margin-right: 0.5rem;
+  }
+  .grid__1 {
+  }
+  .step__img-2 {
+    grid-row: 2/3;
+  }
+  .step__cont-det-2 {
+    grid-row: 1/2;
+  }
+  /*-------------------------------------------------------------*/
+  /*-------------STYLIGN THE SECTION OF HOW IT WORKS-------------*/
+  /*-------------------------------------------------------------*/
+  .section__works {
+    padding: 1.5rem 0;
+  }
+  .description__text {
+    font-size: 3.4rem;
+    font-weight: 300;
+  }
+  /*-------------------------------------------------------------*/
+  /*-------------THIS IS THE SECTION MEALS-----------------------*/
+  /*-------------------------------------------------------------*/
+  .section__meals {
+    padding: 3rem 0;
+  }
+  .cards {
+    grid-gap: 5rem;
+  }
+  .card:hover {
+    transform: translateY(1rem);
+    box-shadow: var(--box-shadow);
+    transform: scale(1);
+  }
+  .card__img {
+    filter: none;
+  }
+  .card:hover .card__img {
+    filter: none;
+  }
+  .diet {
+    padding: 1rem 2rem;
+  }
+  .diet p {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .card__text {
+    padding: 1rem 3rem;
+  }
+  .card__check {
+    padding: 1rem 3.5rem;
+  }
+  .recipe-btn:hover {
+    border-bottom: none;
+    background-color: #000;
+  }
+}
