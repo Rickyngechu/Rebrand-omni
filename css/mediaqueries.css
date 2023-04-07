@@ -203,6 +203,17 @@ media queries
   html {
     font-size: 45%;
   }
+  .mobile-nav {
+    width: 25%;
+    padding: 1rem 0.5rem;
+  }
+  .mb-close {
+    margin-right: 1rem;
+  }
+  .navigation__link-btn:link,
+  .navigation__link-btn:visited {
+    padding: 1.5rem 2rem;
+  }
   .btn__hero-1 {
     display: inline-block;
     padding: 1rem 2rem;

@@ -190,26 +190,36 @@ h4 {
 .hambuger span:not(:last-child) {
   margin-bottom: 0.5rem;
 }
-/* .mb {
+.mb {
   position: fixed;
   height: 100rem;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: -1;
+  opacity: 0;
   background-color: hsla(0, 0%, 7%, 0.584);
+  transition: all 0.3s;
 }
+
 .mobile-nav {
   padding: 1rem 3rem;
   position: fixed;
   height: 100rem;
-  min-width: 25%;
+  width: 0;
   top: 0;
   left: 0;
   display: flex;
   gap: 3rem;
+  opacity: 0;
   flex-direction: column;
   background-color: var(--color-primary-light-3);
+  backdrop-filter: blur(1.5rem);
+}
+.sticky-mobile {
+  top: 7rem;
+  background-color: hsla(28, 74%, 64%, 0.417);
+  backdrop-filter: blur(1.5rem);
 }
 .mb-close {
   align-self: flex-end;
@@ -234,7 +244,7 @@ h4 {
 }
 .mobile__link:not(:last-child) {
   margin-bottom: 1rem;
-} */
+}
 /*-------------------------------------------------------------*/
 /*-------------THIS IS THE HERO SECTION------------------------*/
 /*-------------------------------------------------------------*/
