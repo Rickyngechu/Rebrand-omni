@@ -192,7 +192,7 @@ h4 {
 }
 .mb {
   position: fixed;
-  height: 100rem;
+  height: 100%;
   width: 100%;
   top: 0;
   left: 0;
@@ -205,7 +205,7 @@ h4 {
 .mobile-nav {
   padding: 1rem 3rem;
   position: fixed;
-  height: 100rem;
+  height: 100%;
   width: 0;
   top: 0;
   left: 0;
