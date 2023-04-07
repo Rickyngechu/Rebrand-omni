@@ -448,25 +448,61 @@ const cardP = document.querySelector('.price');
 const cardP1 = document.querySelector('.price-1');
 const cardP2 = document.querySelector('.price-2');
 const cardP3 = document.querySelector('.price-3');
+const headN = document.querySelector('.header');
+const navi = document.querySelector('.navigation');
 
+// const navLink = document.querySelectorAll('.navigation__link');
 
-// console.log(cardP);
+navi.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('navigation__link')) {
+    console.log(e.target);
+    const id = e.target.getAttribute('href');
+    console.log(id);
+    // document.querySelector(id).scrollIntoView({ behaviour: 'smooth' });
+  }
+});
+// navLink.forEach(el => {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     console.log(e.target);
+//     const id = e.target.getAttribute('href');
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({ behaviour: 'smooth' });
+//   });
+// });
+// console.log(navLink);
+
+//HERE WE ARE IMPLEMENTING THE STICKY NAVBAR FUNTION
+const hero = document.querySelector('.section-hero');
+const callback = function (entries) {
+  const entry = entries[0];
+  if (!entry.isIntersecting) headN.classList.add('sticky');
+  if (entry.isIntersecting) headN.classList.remove('sticky');
+};
+
+const headerObserver = new IntersectionObserver(callback, {
+  root: null,
+  threshold: 0,
+  rootMargin: '-90px',
+});
+
+headerObserver.observe(hero);
 
 //TOGGLE THE BUTTON ELEMENTS
 tabBtns.addEventListener('click', function (e) {
-    const clicked = e.target
-    if (!clicked) return;
-    btn1.classList.toggle('btn--active');
-    btn2.classList.toggle('btn--active');
+  const clicked = e.target;
+  if (!clicked) return;
+  btn1.classList.toggle('btn--active');
+  btn2.classList.toggle('btn--active');
 
-    let card1 = cardP1.innerHTML = '$399';
-    let card2 = cardP2.innerHTML = '$699';
-    let card3 = cardP3.innerHTML = '$999';
+  let card1 = (cardP1.innerHTML = '$399');
+  let card2 = (cardP2.innerHTML = '$699');
+  let card3 = (cardP3.innerHTML = '$999');
 
-    if (btn2.classList.contains('btn--active') && card1 && card2 && card3) {
-        cardP1.innerHTML = '$3999';
-        cardP2.innerHTML = '$6999';
-        cardP3.innerHTML = '$9999';
-    }
-
-})
+  if (btn2.classList.contains('btn--active') && card1 && card2 && card3) {
+    cardP1.innerHTML = '$3999';
+    cardP2.innerHTML = '$6999';
+    cardP3.innerHTML = '$9999';
+  }
+});

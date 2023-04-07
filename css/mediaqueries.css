@@ -15,6 +15,11 @@ media queries
   .navigation {
     display: none;
   }
+  .hambuger {
+    display: block;
+    padding: 0.5rem;
+    position: relative;
+  }
   /*-------------------------------------------------------------*/
   /*-------------THIS IS STYLING THE SECTION PRICING-------------*/
   /*-------------------------------------------------------------*/
@@ -49,6 +54,7 @@ media queries
   .container {
     padding: 0 3.5rem;
   }
+
   .header {
     padding: 0 1.5rem;
   }
