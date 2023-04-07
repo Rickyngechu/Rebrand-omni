@@ -106,8 +106,6 @@ media queries
     /* grid-template-rows: 1fr 2fr; */
     grid-gap: 3rem;
   }
-  .footer-1 {
-  }
   .footer-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -223,8 +221,6 @@ media queries
   }
   .hero__custom-img {
     margin-right: 0.5rem;
-  }
-  .grid__1 {
   }
   .step__img-2 {
     grid-row: 2/3;
