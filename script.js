@@ -1,6 +1,5 @@
 'use strict';
-
-//WE ARE TESTING THE TABBED COMPONENT
+//AT FIRST WE SELECT ALL THE HTML ELEMENTS THROUGHT CLASSES
 const tabBtns = document.querySelector('.tab-buttons');
 const btnT = document.querySelectorAll('.btn-tab');
 const btn1 = document.querySelector('.btn-tab--1');
@@ -22,45 +21,48 @@ const mobile = document.querySelector('.mb');
 const mobileCt = document.querySelector('.mobile');
 const mobileNav = document.querySelector('.mobile-nav');
 const mbLink = document.querySelector('.mobile__link');
-// const navLink = document.querySelectorAll('.navigation__link');
 
-const callback1 = function (entries, observer) {
+//IMPLEMENTING THE BUTTON CLOSE AND OPEN ON THE NAVBAR
+const close = function () {
+  mobile.style.opacity = 0;
+  mobile.style.zIndex = 0;
+  mobileNav.style.width = 0;
+  mobileNav.style.opacity = 0;
+};
+const navOpen = function () {
+  mobile.style.opacity = 1;
+  mobile.style.zIndex = 1000;
+  mobileNav.style.width = '25%';
+  mobileNav.style.opacity = 1;
+};
+mbClose.addEventListener('click', close);
+hamOpen.addEventListener('click', navOpen);
+
+//HERE WE ARE IMPLEMENTING THE STICKY MOBILE NAVIGATION
+const callback1 = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) mobileNav.classList.add('sticky-mobile');
   if (entry.isIntersecting) mobileNav.classList.remove('sticky-mobile');
 };
-
 const mobileObs = new IntersectionObserver(callback1, {
   root: null,
   threshold: 0,
   rootMargin: '-90px',
 });
-
 mobileObs.observe(hero);
+
 //IMPLEMENTING SMOOTH SCROLL ON MOBILE DEVICES AND RESET IT
+//(lets refactor this code)
+const smoothScroll = function (id) {
+  document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+};
 mobileCt.addEventListener('click', function (e) {
   e.preventDefault();
   if (e.target.classList.contains('mobile__link')) {
     const id = e.target.getAttribute('href');
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-    mobile.style.opacity = 0;
-    mobile.style.zIndex = 0;
-    mobileNav.style.width = 0;
-    mobileNav.style.opacity = 0;
+    smoothScroll(id);
+    close();
   }
-});
-
-mbClose.addEventListener('click', function (e) {
-  mobile.style.opacity = 0;
-  mobile.style.zIndex = 0;
-  mobileNav.style.width = 0;
-  mobileNav.style.opacity = 0;
-});
-hamOpen.addEventListener('click', function (e) {
-  mobile.style.opacity = 1;
-  mobile.style.zIndex = 1000;
-  mobileNav.style.width = '25%';
-  mobileNav.style.opacity = 1;
 });
 
 //HERE WE ARE IMPLEMENTING THE SMOOTH SCROLL ON NAVIGATION NAVBAR FUNTION
@@ -68,25 +70,22 @@ navi.addEventListener('click', function (e) {
   e.preventDefault();
   if (e.target.classList.contains('navigation__link')) {
     const id = e.target.getAttribute('href');
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    smoothScroll(id);
   }
 });
 
 priceBtn.addEventListener('click', function (e) {
   e.preventDefault();
   const id = e.target.getAttribute('href');
-  document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-  mobile.style.opacity = 0;
-  mobile.style.zIndex = 0;
-  mobileNav.style.width = 0;
-  mobileNav.style.opacity = 0;
+  smoothScroll(id);
+  close();
 });
 
 heroDesc.addEventListener('click', function (e) {
   e.preventDefault();
   if (e.target.classList.contains('btn')) {
     const id = e.target.getAttribute('href');
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    smoothScroll(id);
   }
 });
 
@@ -102,7 +101,6 @@ const headerObserver = new IntersectionObserver(callback, {
   threshold: 0,
   rootMargin: '-90px',
 });
-
 headerObserver.observe(hero);
 
 //TOGGLE THE BUTTON ELEMENTS
