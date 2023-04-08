@@ -430,11 +430,19 @@ h4 {
   justify-content: center;
   align-items: center;
   position: relative;
+  transform: translateY(15rem);
+  opacity: 0;
+  transition: all 1s;
+}
+.step-animate {
+  transform: translateY(0.5rem);
+  opacity: 1;
 }
 .step-image {
   width: 38%;
   z-index: 10;
 }
+
 .step__img::before {
   content: '';
   position: absolute;

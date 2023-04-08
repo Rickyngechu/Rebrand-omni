@@ -120,3 +120,29 @@ tabBtns.addEventListener('click', function (e) {
     cardP3.innerHTML = '$9999';
   }
 });
+
+//IMPLEMENTING THE REVEALING ELEMENTS ON SCROLL
+const allGrid = document.querySelectorAll('.grid');
+// console.log(grid1, grid2, grid3);
+const [img1, img2, img3] = document.querySelectorAll('.step__img');
+
+const callback2 = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+  if (entry.isIntersecting) {
+    // revealAll.forEach(el => {
+    //   el.classList.add('step-animate');
+    // });
+    img1.classList.add('step-animate');
+    img2.classList.add('step-animate');
+    img3.classList.add('step-animate');
+  }
+};
+
+const imageOberver = new IntersectionObserver(callback2, {
+  root: null,
+  threshold: 1,
+});
+allGrid.forEach(section => {
+  imageOberver.observe(section);
+});
