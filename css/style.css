@@ -931,7 +931,13 @@ form::-webkit-input-placeholder {
   background-position: center;
   background-size: cover;
 }
-
+.message {
+  display: block;
+  background-color: orangered;
+  border-radius: 4px;
+  font-size: 2rem;
+  text-align: center;
+}
 /*THIS IS THE SECTION FOOTER*/
 .section__footer {
   padding: 5rem 0;

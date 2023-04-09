@@ -607,3 +607,19 @@ imageOberver2.observe(cont3);
     ? (module.exports = y)
     : (window.SmoothScroll = y);
 })();
+
+/* FORM FUNCTIONALITY */
+const subscribeForm = document.querySelector('.signup-btn');
+subscribeForm.addEventListener('click', function (e) {
+  e.preventDefault();
+  let name = document.querySelector('#name').value;
+  let planChoice = document.querySelector('#where').value;
+  let message = document.querySelector('.submission');
+  if (planChoice !== '') {
+    message.style.display = 'block';
+    message.textContent = `Thank you for your interest in the ${planChoice} plan, ${name}. Unfortunately, Omnifood is a fictional company so there's no free meal to send you.`;
+  } else {
+    message.style.display = 'block';
+    message.textContent = `Sorry, you need to choose a plan to proceed!`;
+  }
+});
