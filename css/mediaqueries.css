@@ -317,7 +317,7 @@ media queries
   /*-------------STYLING THE SECTION ORDER WHICH HAS A FORM-------------*/
   /*--------------------------------------------------------------------*/
   .cards {
-    max-width: 49rem;
+    max-width: 42rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
