@@ -613,7 +613,7 @@ const subscribeForm = document.querySelector('.signup-btn');
 subscribeForm.addEventListener('click', function (e) {
   e.preventDefault();
   let name = document.querySelector('#name').value;
-  let planChoice = document.querySelector('#where').value;
+  let planChoice = document.querySelector('.user-plan').value;
   let message = document.querySelector('.submission');
   if (planChoice !== '') {
     message.style.display = 'block';
