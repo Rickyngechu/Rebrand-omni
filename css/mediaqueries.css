@@ -282,7 +282,10 @@ media queries
   /*-------------------------------------------------------------*/
   /*-------------THIS IS STYLING THE SECTION PRICING-------------*/
   /*-------------------------------------------------------------*/
-
+  .customer-image {
+    height: 6rem;
+    width: 6rem;
+  }
   .section__pricing {
     padding: 3rem 0;
   }
@@ -313,12 +316,20 @@ media queries
   /*--------------------------------------------------------------------*/
   /*-------------STYLING THE SECTION ORDER WHICH HAS A FORM-------------*/
   /*--------------------------------------------------------------------*/
-  .customer-image {
-    display: block;
-    height: 6rem;
-    width: 6rem;
-    border: 3px solid var(--color-primary-light-2);
-    border-radius: 50%;
+  .cards {
+    max-width: 49rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 5rem;
+  }
+  .card {
+    border-radius: 7px;
+    background-color: hsl(0, 0%, 100%);
+    overflow: hidden;
+    transition: all 0.3s;
+    transform: scale(1);
   }
   .form__details {
     background-color: var(--color-primary);
