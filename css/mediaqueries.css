@@ -313,6 +313,13 @@ media queries
   /*--------------------------------------------------------------------*/
   /*-------------STYLING THE SECTION ORDER WHICH HAS A FORM-------------*/
   /*--------------------------------------------------------------------*/
+  .customer-image {
+    display: block;
+    height: 5rem;
+    width: 5rem;
+    border: 3px solid var(--color-primary-light-2);
+    border-radius: 50%;
+  }
   .form__details {
     background-color: var(--color-primary);
     padding: 3.5rem;
