@@ -6,7 +6,7 @@ const btn1 = document.querySelector('.btn-tab--1');
 const btn2 = document.querySelector('.btn-tab--2');
 
 const hero = document.querySelector('.section-hero');
-
+const formT = document.querySelector('.form__text');
 const cardP = document.querySelector('.price');
 const cardP1 = document.querySelector('.price-1');
 const cardP2 = document.querySelector('.price-2');
@@ -169,7 +169,40 @@ const imageOberver2 = new IntersectionObserver(callback4, {
   threshold: 0.3,
 });
 imageOberver2.observe(cont3);
+/* FORM FUNCTIONALITY */
+const subscribeForm = document.querySelector('.signup-btn');
+subscribeForm.addEventListener('click', function (e) {
+  e.preventDefault();
+  const html = `
+  <p class="submission">
+      Unfortunately, Omnifood is a fictional company so  there's no
+      free meal to send you🤪.Currently not working!
+</p>
 
+  `;
+  formT.insertAdjacentHTML('afterend', html);
+  // ;
+  // let name = document.querySelector('#name').value;
+  // let planChoice = document.querySelector('.user-plan').value;
+  // let message = document.querySelector('.submission');
+  // if (planChoice !== '') {
+  //   message.style.display = 'block';
+  //   message.textContent = `Thank you for your interest in the ${planChoice} plan, ${name}. Unfortunately, Omnifood is a fictional company so there's no free meal to send you.`;
+  // } else {
+  //   message.style.display = 'block';
+  //   message.textContent = `Sorry, you need to choose a plan to proceed!`;
+  // }
+});
+
+//IMPLEMENTING THE SMOOTHSCROLLING ON THE TOP BUTTON
+const topScroll = document.querySelector('.scrollup');
+topScroll.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log(e.target);
+  let id = e.target.getAttribute('href');
+  console.log(id);
+  document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+});
 //THIS FUNTION IS FOR SMOOTH SCROLLING
 (function () {
   function C() {
@@ -607,19 +640,3 @@ imageOberver2.observe(cont3);
     ? (module.exports = y)
     : (window.SmoothScroll = y);
 })();
-
-/* FORM FUNCTIONALITY */
-const subscribeForm = document.querySelector('.signup-btn');
-subscribeForm.addEventListener('click', function (e) {
-  e.preventDefault();
-  let name = document.querySelector('#name').value;
-  let planChoice = document.querySelector('.user-plan').value;
-  let message = document.querySelector('.submission');
-  if (planChoice !== '') {
-    message.style.display = 'block';
-    message.textContent = `Thank you for your interest in the ${planChoice} plan, ${name}. Unfortunately, Omnifood is a fictional company so there's no free meal to send you.`;
-  } else {
-    message.style.display = 'block';
-    message.textContent = `Sorry, you need to choose a plan to proceed!`;
-  }
-});
