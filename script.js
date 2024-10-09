@@ -22,6 +22,19 @@ const mobileCt = document.querySelector('.mobile');
 const mobileNav = document.querySelector('.mobile-nav');
 const mbLink = document.querySelector('.mobile__link');
 
+// Store scroll position before the page reloads
+window.addEventListener('beforeunload', () => {
+  localStorage.setItem('scrollPosition', window.scrollY);
+});
+
+// Restore scroll position after the page loads
+window.addEventListener('load', () => {
+  const scrollPosition = localStorage.getItem('scrollPosition');
+  if (scrollPosition) {
+    window.scrollTo(0, scrollPosition);
+  }
+});
+
 //IMPLEMENTING THE BUTTON CLOSE AND OPEN ON THE NAVBAR
 const close = function () {
   mobile.style.opacity = 0;

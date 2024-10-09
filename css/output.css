@@ -1053,6 +1053,10 @@ ul {
   border-radius: 0.125rem;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .border-t{
   border-top-width: 1px;
 }
@@ -1139,6 +1143,10 @@ ul {
 
 .p-12{
   padding: 3rem;
+}
+
+.p-6{
+  padding: 1.5rem;
 }
 
 .px-12{
@@ -1317,10 +1325,43 @@ ul {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-md{
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.outline-none{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.ring-1{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-2{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-orange-300{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(253 186 116 / var(--tw-ring-opacity));
+}
+
+.ring-green-800{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(22 101 52 / var(--tw-ring-opacity));
+}
+
+.ring-offset-1{
+  --tw-ring-offset-width: 1px;
+}
+
+.ring-offset-2{
+  --tw-ring-offset-width: 2px;
+}
+
+.ring-offset-4{
+  --tw-ring-offset-width: 4px;
 }
 
 .transition-all{
@@ -1398,6 +1439,45 @@ Medium: 11px
   background-color: rgb(207 113 31 / var(--tw-bg-opacity));
 }
 
+.focus\:ring-1:focus{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-2:focus{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-blue-400:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(96 165 250 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-black:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-green-800:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(22 101 52 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-offset-1:focus{
+  --tw-ring-offset-width: 1px;
+}
+
+.focus\:ring-offset-4:focus{
+  --tw-ring-offset-width: 4px;
+}
+
+.focus\:ring-offset-2:focus{
+  --tw-ring-offset-width: 2px;
+}
+
 @media (min-width: 640px){
   .sm\:order-last{
     order: 9999;
@@ -1405,6 +1485,18 @@ Medium: 11px
 
   .sm\:ml-8{
     margin-left: 2rem;
+  }
+
+  .sm\:mb-6{
+    margin-bottom: 1.5rem;
+  }
+
+  .sm\:mb-8{
+    margin-bottom: 2rem;
+  }
+
+  .sm\:mb-12{
+    margin-bottom: 3rem;
   }
 
   .sm\:grid-cols-2{
@@ -1423,6 +1515,15 @@ Medium: 11px
     gap: 2rem;
   }
 
+  .sm\:p-12{
+    padding: 3rem;
+  }
+
+  .sm\:py-36{
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+
   .sm\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1430,6 +1531,11 @@ Medium: 11px
 
   .sm\:text-lg{
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-xl{
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
@@ -1546,6 +1652,16 @@ Medium: 11px
   line-height: 1.75rem;
 }
 
+.\[\&\>li\]\:text-sm>li{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.\[\&\>li\]\:text-base>li{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .\[\&\>li\]\:font-normal>li{
   font-weight: 400;
 }
@@ -1553,4 +1669,11 @@ Medium: 11px
 .\[\&\>li\]\:text-grey-1>li{
   --tw-text-opacity: 1;
   color: rgb(136 136 136 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px){
+  .\[\&\>li\]\:sm\:text-lg>li{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
